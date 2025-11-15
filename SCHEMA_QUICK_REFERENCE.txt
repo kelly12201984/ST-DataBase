@@ -1,0 +1,274 @@
+================================================================================
+                   DATABASE SCHEMA QUICK REFERENCE
+                Tank Manufacturing Quotation System
+================================================================================
+
+CORE TRANSACTION FLOW:
+----------------------
+INFORMATION.csv (Quote/Project Header)
+    |
+    ├── QUOTE # (quote_number) PRIMARY KEY
+    ├── CUSTOMER NAME
+    ├── DUE DATE
+    ├── DIAMETER (tank dimension)
+    ├── DESIGN PRESSURE, DESIGN TEMP, MOC
+    └── Links to: RESULT.csv
+
+    |
+    v
+
+RESULT.csv (Final Bill of Materials)
+    |
+    ├── QUOTATION NO (from INFORMATION)
+    ├── DATE (from INFORMATION)
+    ├── Line items with QTY, DESCRIPTION, MOC
+    └── Includes all selected components
+
+
+KEY MASTER DATA TABLES:
+-----------------------
+1. DESIGN TEMPLATES (Choose one based on design type):
+   - TANK_DESIGN,_API.csv (3 material variants: C, 304SS, 316SS)
+   - TANK_DESIGN,_ASME.csv (3 material variants: C, 304SS, 316SS)
+   - HORIZONTAL_TANK.csv (3 material variants)
+
+2. COMPONENT SPECIFICATIONS:
+   - TOP-BTM-SHELL_DESIGN.csv (roof/bottom type, thickness, stiffeners)
+   - SUPPORTS-RINGS.csv (support type selection)
+   - CONNECTIONS.csv (nozzle specifications)
+   - JACKETS.csv (jacket selections by zone)
+   - LADDER-HANDRAIL-PLATFORM.csv (access equipment)
+
+3. ADD-ON COMPONENT BOMs:
+   - ADD_ON-INTERNAL_COIL.csv
+   - ADD_ON-_DIMPLE_JACKET.csv
+   - ADD_ON-_HALF_PIPE_JACKET.csv
+   - ADD_ON-_LADDER.csv
+   - ADD_ON-_HANDRAIL.csv
+   - ADD_ON-_PLATFORM.csv
+   - MANWAY,_CS.csv
+   - Cleanout.csv
+
+
+LOOKUP/CALCULATION TABLES:
+---------------------------
+Material & Pricing:
+  - PRICE_DATABASE.csv
+    Input: Material type, Thickness, Plate width
+    Output: Cost per unit, Weight per unit
+
+Material & Hours:
+  - HOUR-MATERIAL_DATABASE.csv (5197 rows - LARGEST)
+    Input: Tank size index
+    Output: Plate quantities, Labor hours for head/shell
+
+Support Types:
+  - LISTS.csv (Valid options for selections)
+
+
+LABOR ESTIMATION TABLES:
+------------------------
+Component-Specific Labor Hours (lookup tables by parameters):
+
+Structural Components:
+  - LABOR-_SHELL_ROLL,_CS.csv (Carbon steel shell rolling)
+  - LABOR-_SHELL_ROLL,_SS.csv (Stainless steel shell rolling)
+  - LABOR-_ASME_HEAD_SHELL.csv (ASME head/shell welding)
+  - LABOR-_API_TOP_BTM_RIM_ANGLE_.csv (API top/bottom/rim angle)
+  - LABOR-_SKIRT.csv (Skirt assembly)
+
+Support Components:
+  - LABOR-_LEGS.csv (Angle legs)
+  - Labor_-_Saddles.csv (Saddle supports)
+  - Labor_-_Support_lugs.csv (Support lugs)
+  - LABOR-_RING.csv (Rings and supports)
+
+Connections & Accessories:
+  - LABOR-_NOZZLE_.csv (Nozzle installation hours)
+  - LABOR-_BAFFLE.csv (Internal baffles)
+  - LABOR-_PLATFORM.csv (Platform assembly)
+  - LABOR-_LADDER.csv (Ladder installation)
+  - LABOR-_HANDRAIL.csv (Handrail installation)
+
+Optional Features:
+  - LABOR-_INTERNAL_COIL.csv (Internal coils)
+  - LABOR-_DIMPLE_JACKET.csv (Dimple jacket)
+  - LABOR-_HALF_PIPE_JACKET.csv (Half pipe jacket)
+  - LABOR-_POLISH.csv (Finish/Polish)
+
+
+COMMON KEY FIELDS:
+------------------
+TANK DIMENSIONS:
+  - Tank Diameter (in FT) - Primary key for most labor lookups
+  - Tank Height/Shell Height (in FT)
+  - Tank ID/OD (in inches)
+  - Shell Thickness (in inches)
+
+MATERIAL CODES:
+  SA36         = Carbon steel plate (ASTM A36)
+  SA240        = Stainless steel plate (300 series)
+  SA312        = Stainless steel pipe
+  SA479        = Stainless steel bar/wire
+  GCST         = Galvanized carbon steel tubing
+
+MATERIAL TYPE (MOC):
+  - Carbon Steel (CS)
+  - 304 Stainless Steel (SS304)
+  - 316 Stainless Steel (SS316)
+
+DESIGN TYPE:
+  - API (American Petroleum Institute)
+  - ASME (American Society of Mechanical Engineers)
+  - HORIZONTAL
+
+
+SUGGESTED ENTITY RELATIONSHIPS:
+-------------------------------
+QUOTES
+  ├── quote_id (PK)
+  ├── quote_number (UNIQUE, Business Key)
+  ├── customer_id (FK to CUSTOMERS)
+  ├── design_type (FK: API, ASME, HORIZONTAL)
+  ├── material_type (FK: Carbon, SS304, SS316)
+  ├── due_date
+  └── 1:N relationship to QUOTE_LINE_ITEMS
+
+
+QUOTE_SPECIFICATIONS
+  ├── spec_id (PK)
+  ├── quote_id (FK)
+  ├── diameter_inches
+  ├── height_inches
+  ├── design_pressure
+  ├── design_temperature
+  └── material_of_construction
+
+
+QUOTE_LINE_ITEMS
+  ├── item_id (PK)
+  ├── quote_id (FK)
+  ├── component_id (FK)
+  ├── quantity
+  ├── unit_price
+  └── extended_price
+
+
+TANK_COMPONENTS
+  ├── component_id (PK)
+  ├── component_type (FK)
+  ├── item_name
+  ├── description
+  ├── material_spec (FK)
+  ├── labor_hours
+  └── unit_price
+
+
+LABOR_ESTIMATES (indexed by component parameters)
+  ├── estimate_id (PK)
+  ├── component_type (FK)
+  ├── param1_value
+  ├── param2_value
+  ├── ...
+  ├── total_hours
+  └── effective_date
+
+
+MATERIAL_PRICES
+  ├── price_id (PK)
+  ├── material_type (FK)
+  ├── thickness_inches
+  ├── plate_width_inches
+  ├── cost_per_unit
+  └── weight_per_unit
+
+
+MATERIAL_SPECIFICATIONS
+  ├── spec_code (PK: SA36, SA240-304/304L, etc)
+  ├── material_type (FK)
+  ├── standard_reference (ASTM standard)
+  └── applicable_uses
+
+
+DATA QUALITY NOTES:
+-------------------
+FILE FORMAT:
+  - All files exported from Excel with metadata
+  - Each row contains: sheet, row, col, address, value, formula
+  - Actual data in "value" column
+  - Requires parsing for standard database format
+
+INCONSISTENCIES FOUND:
+  - Material codes vary: SA240-304/304L vs SA240-304 vs SA240-304L WLD
+  - Units inconsistent: some dimensions in FT, some in inches
+  - Labor field often empty ("-" or blank)
+  - Header row numbers vary (Row 2, 4, 6-7)
+  - Wide spreadsheets with material variants side-by-side
+
+RECOMMENDATIONS:
+  1. Normalize material codes to standard format
+  2. Convert all dimensions to single unit (FT or inches)
+  3. Separate calculation rules from data
+  4. Standardize header row locations
+  5. Add data validation for NOT NULL fields
+  6. Create lookup tables for valid material codes
+  7. Document labor calculation formulas
+  8. Implement ETL to convert from Excel export format
+
+
+FILE DEPENDENCIES:
+------------------
+INFORMATION.csv
+  └─> RESULT.csv (quote_number linkage)
+  └─> Design selection files (based on design_type)
+  └─> Labor lookups (based on diameter/dimensions)
+
+TANK_DESIGN,_*
+  └─> PRICE_DATABASE.csv (material costs)
+  └─> Labor-related files (for LABOR column value)
+
+HOUR-MATERIAL_DATABASE.csv (Large master table)
+  ├─ Used for composite material requirements
+  ├─ Used for head/shell hour calculations
+  └─ Indexed by tank size ranges
+
+LABOR-_*.csv files
+  ├─ All use tank dimensions as lookup key
+  ├─ May reference LISTS.csv for option validation
+  └─ Output feeds into RESULT.csv pricing
+
+CONNECTIONS.csv
+  └─> LABOR-_NOZZLE_.csv (for labor calculation)
+
+PRICE_DATABASE.csv & LISTS.csv
+  └─> Primary master data for validation
+
+
+SUMMARY:
+--------
+Total Files: 41
+Total Data Rows: 10,497
+Largest File: HOUR-MATERIAL_DATABASE.csv (5,197 rows)
+
+File Types:
+  - Quote/Project: 2 files
+  - Design Templates: 7 files
+  - Labor Lookups: 18 files
+  - Component BOMs: 8 files
+  - Reference/Config: 4 files
+  - Metadata: 2 files
+
+Core Business Process:
+  1. Create Quote (INFORMATION.csv)
+  2. Select Design Type (API/ASME/HORIZONTAL)
+  3. Select Material Type (Carbon/304SS/316SS)
+  4. Specify Tank Dimensions (diameter, height, pressure, temp)
+  5. Specify Components/Options
+  6. System populates RESULT.csv with:
+     - BOM from selected design file
+     - Material costs from PRICE_DATABASE
+     - Labor hours from LABOR-_*.csv tables
+     - Add-on components and costs
+  7. Generate final quotation (RESULT.csv)
+
+================================================================================
