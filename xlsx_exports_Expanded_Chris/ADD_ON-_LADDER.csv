@@ -1,0 +1,26 @@
+sheet,row,col,address,value,formula
+ADD ON- LADDER,1,1,A1,LADDER,
+ADD ON- LADDER,2,1,A2,ITEMS IN RED NEED TO HAVE SIZE VERIFIED OR DIMENSIONS INPUT,
+ADD ON- LADDER,4,1,A4,ITEM,
+ADD ON- LADDER,4,2,B4,QTY,
+ADD ON- LADDER,4,3,C4,DESCRIPTION,
+ADD ON- LADDER,4,4,D4,MTRL,
+ADD ON- LADDER,4,6,F4,LABOR,
+ADD ON- LADDER,6,1,A6,LADDER,
+ADD ON- LADDER,6,2,B6,1,
+ADD ON- LADDER,6,3,C6, LADDER,
+ADD ON- LADDER,6,4,D6,GCST,
+ADD ON- LADDER,7,1,A7,LADDER FALL PROTECTION,
+ADD ON- LADDER,7,2,B7,1,
+ADD ON- LADDER,7,3,C7,CABLE LIFELINE SYSTEM (GRAINGER) 30',
+ADD ON- LADDER,7,4,D7,#487R49,
+ADD ON- LADDER,7,5,E7,800,
+ADD ON- LADDER,14,3,C14,"If tank requires ladder the top line is needed
+The height of the ladder is put in front of ""ladder""
+Caged ladder = $25 per linear ft
+Non caged ladder = $20 per linear ft
+If it is a non caged ladder than the second line is needed
+If the ladder is between 30-40' than the 30' turns into a 40' and the cost goes up $100
+Same for 40-50', etc
+No labor for 2nd line",
+ADD ON- LADDER,96,1,A96,TOC,

@@ -1,0 +1,14 @@
+sheet,row,col,address,value,formula
+LABOR- HANDRAIL,1,1,A1,HANDRAILS,
+LABOR- HANDRAIL,2,1,A2,Diameter of Tank (FT),
+LABOR- HANDRAIL,2,2,B2,Round or Straight,
+LABOR- HANDRAIL,2,3,C2,Total M/H for Handrails,
+LABOR- HANDRAIL,2,5,E2,Round/Straight,
+LABOR- HANDRAIL,3,1,A3,14,
+LABOR- HANDRAIL,3,2,B3,Straight,
+LABOR- HANDRAIL,3,3,C3,40.376000000000005,=(A3*3.14*E3)+A3
+LABOR- HANDRAIL,3,5,E3,.6,"=IF(B3=""Round"","".75"","".6"")"
+LABOR- HANDRAIL,13,3,C13,"Manhours for handrails
+Handrails go around the top of the tank.  
+Not all tanks have handrails",
+LABOR- HANDRAIL,41,1,A41,TOC,

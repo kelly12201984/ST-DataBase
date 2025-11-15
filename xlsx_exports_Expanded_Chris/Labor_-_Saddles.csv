@@ -1,0 +1,98 @@
+sheet,row,col,address,value,formula
+Labor - Saddles,1,1,A1,SADDLE SUPPORTS,
+Labor - Saddles,2,1,A2,Tank Diameter,
+Labor - Saddles,2,2,B2,# of Saddles,
+Labor - Saddles,2,3,C2,Total M/H for Saddles,
+Labor - Saddles,2,5,E2,Belly Band,
+Labor - Saddles,2,6,F2,Saddle Construction,
+Labor - Saddles,2,7,G2,Installation,
+Labor - Saddles,2,8,H2,M/H Per Saddle,
+Labor - Saddles,3,1,A3,Up to 1',
+Labor - Saddles,3,3,C3,0,=B3*H3
+Labor - Saddles,3,5,E3,2,
+Labor - Saddles,3,6,F3,4,
+Labor - Saddles,3,7,G3,1,
+Labor - Saddles,3,8,H3,7,=E3+F3+G3
+Labor - Saddles,4,1,A4,>1' to 2',
+Labor - Saddles,4,3,C4,0,=B4*H4
+Labor - Saddles,4,5,E4,2,
+Labor - Saddles,4,6,F4,4,
+Labor - Saddles,4,7,G4,2,
+Labor - Saddles,4,8,H4,8,=E4+F4+G4
+Labor - Saddles,5,1,A5,>2' to 3',
+Labor - Saddles,5,3,C5,0,=B5*H5
+Labor - Saddles,5,5,E5,3,
+Labor - Saddles,5,6,F5,4,
+Labor - Saddles,5,7,G5,4,
+Labor - Saddles,5,8,H5,11,=E5+F5+G5
+Labor - Saddles,6,1,A6,>3' to 4',
+Labor - Saddles,6,3,C6,0,=B6*H6
+Labor - Saddles,6,5,E6,3,
+Labor - Saddles,6,6,F6,5,
+Labor - Saddles,6,7,G6,5,
+Labor - Saddles,6,8,H6,13,=E6+F6+G6
+Labor - Saddles,7,1,A7,>4' to 5',
+Labor - Saddles,7,3,C7,0,=B7*H7
+Labor - Saddles,7,5,E7,4,
+Labor - Saddles,7,6,F7,5,
+Labor - Saddles,7,7,G7,7,
+Labor - Saddles,7,8,H7,16,=E7+F7+G7
+Labor - Saddles,7,12,L7,"Only used in horizontal ASME vessels
+Calculation will tell you how many",
+Labor - Saddles,8,1,A8,>5' to 6',
+Labor - Saddles,8,3,C8,0,=B8*H8
+Labor - Saddles,8,5,E8,4,
+Labor - Saddles,8,6,F8,5,
+Labor - Saddles,8,7,G8,8,
+Labor - Saddles,8,8,H8,17,=E8+F8+G8
+Labor - Saddles,9,1,A9,>6' to 7',
+Labor - Saddles,9,3,C9,0,=B9*H9
+Labor - Saddles,9,5,E9,5,
+Labor - Saddles,9,6,F9,6,
+Labor - Saddles,9,7,G9,9,
+Labor - Saddles,9,8,H9,20,=E9+F9+G9
+Labor - Saddles,10,1,A10,>7' to 8',
+Labor - Saddles,10,3,C10,0,=B10*H10
+Labor - Saddles,10,5,E10,5,
+Labor - Saddles,10,6,F10,6,
+Labor - Saddles,10,7,G10,10,
+Labor - Saddles,10,8,H10,21,=E10+F10+G10
+Labor - Saddles,11,1,A11,>8' to 9',
+Labor - Saddles,11,3,C11,0,=B11*H11
+Labor - Saddles,11,5,E11,6,
+Labor - Saddles,11,6,F11,7,
+Labor - Saddles,11,7,G11,11,
+Labor - Saddles,11,8,H11,24,=E11+F11+G11
+Labor - Saddles,12,1,A12,>9' to 10',
+Labor - Saddles,12,3,C12,0,=B12*H12
+Labor - Saddles,12,5,E12,6,
+Labor - Saddles,12,6,F12,8,
+Labor - Saddles,12,7,G12,12,
+Labor - Saddles,12,8,H12,26,=E12+F12+G12
+Labor - Saddles,13,1,A13,>10' to 11' ,
+Labor - Saddles,13,2,B13,2,
+Labor - Saddles,13,3,C13,60,=B13*H13
+Labor - Saddles,13,5,E13,7,
+Labor - Saddles,13,6,F13,9,
+Labor - Saddles,13,7,G13,14,
+Labor - Saddles,13,8,H13,30,=E13+F13+G13
+Labor - Saddles,14,1,A14,>11' to 12',
+Labor - Saddles,14,2,B14,2,
+Labor - Saddles,14,3,C14,66,=B14*H14
+Labor - Saddles,14,5,E14,7,
+Labor - Saddles,14,6,F14,10,
+Labor - Saddles,14,7,G14,16,
+Labor - Saddles,14,8,H14,33,=E14+F14+G14
+Labor - Saddles,15,1,A15,>12' to 13',
+Labor - Saddles,15,3,C15,0,=B15*H15
+Labor - Saddles,15,5,E15,8,
+Labor - Saddles,15,6,F15,11,
+Labor - Saddles,15,7,G15,18,
+Labor - Saddles,15,8,H15,37,=E15+F15+G15
+Labor - Saddles,16,1,A16,>13' to 14',
+Labor - Saddles,16,3,C16,0,=B16*H16
+Labor - Saddles,16,5,E16,8,
+Labor - Saddles,16,6,F16,12,
+Labor - Saddles,16,7,G16,20,
+Labor - Saddles,16,8,H16,40,=E16+F16+G16
+Labor - Saddles,20,1,A20,TOC,

@@ -1,0 +1,67 @@
+sheet,row,col,address,value,formula
+Labor - Support lugs,2,2,B2,SUPPORT LUGS,
+Labor - Support lugs,4,2,B4,Tank Diameter,
+Labor - Support lugs,4,3,C4,# of Rings Required,
+Labor - Support lugs,4,4,D4,# of Lugs ,
+Labor - Support lugs,4,5,E4,Total M/H for Support Lugs,
+Labor - Support lugs,4,7,G4,Rings Required,
+Labor - Support lugs,4,8,H4,Hold Down Lugs,
+Labor - Support lugs,5,2,B5,Up to 1',
+Labor - Support lugs,5,5,E5,0,=G5+(H5*D5)
+Labor - Support lugs,5,7,G5,0,"=IF(C5=0,""0"",IF(C5=1,""3"",""6""))"
+Labor - Support lugs,5,8,H5,4,=4
+Labor - Support lugs,6,2,B6,>1' to 2',
+Labor - Support lugs,6,5,E6,0,=G6+(H6*D6)
+Labor - Support lugs,6,7,G6,0,"=IF(C6=0,""0"",IF(C6=1,""3"",""6""))"
+Labor - Support lugs,6,8,H6,4,=4
+Labor - Support lugs,6,12,L6,"This table is only used with compress calculations
+The calculation will tell you how many and if it requires rings and how many rings.  Usually there are no rings",
+Labor - Support lugs,7,2,B7,>2' to 3',
+Labor - Support lugs,7,5,E7,0,=G7+(H7*D7)
+Labor - Support lugs,7,7,G7,0,"=IF(C7=0,""0"",IF(C7=1,""3"",""6""))"
+Labor - Support lugs,7,8,H7,4,=4
+Labor - Support lugs,8,2,B8,>3' to 4',
+Labor - Support lugs,8,5,E8,0,=G8+(H8*D8)
+Labor - Support lugs,8,7,G8,0,"=IF(C8=0,""0"",IF(C8=1,""3"",""6""))"
+Labor - Support lugs,8,8,H8,4,=4
+Labor - Support lugs,9,2,B9,>4' to 5',
+Labor - Support lugs,9,5,E9,0,=G9+(H9*D9)
+Labor - Support lugs,9,7,G9,0,"=IF(C9=0,""0"",IF(C9=1,""3"",""6""))"
+Labor - Support lugs,9,8,H9,4,=4
+Labor - Support lugs,10,2,B10,>5' to 6',
+Labor - Support lugs,10,5,E10,0,=G10+(H10*D10)
+Labor - Support lugs,10,7,G10,0,"=IF(C10=0,""0"",IF(C10=1,""5"",""10""))"
+Labor - Support lugs,10,8,H10,4,=4
+Labor - Support lugs,11,2,B11,>6' to 7',
+Labor - Support lugs,11,5,E11,0,=G11+(H11*D11)
+Labor - Support lugs,11,7,G11,0,"=IF(C11=0,""0"",IF(C11=1,""6"",""12""))"
+Labor - Support lugs,11,8,H11,4,=4
+Labor - Support lugs,12,2,B12,>7' to 8',
+Labor - Support lugs,12,5,E12,0,=G12+(H12*D12)
+Labor - Support lugs,12,7,G12,0,"=IF(C12=0,""0"",IF(C12=1,""7"",""14""))"
+Labor - Support lugs,12,8,H12,4,=4
+Labor - Support lugs,13,2,B13,>8' to 9',
+Labor - Support lugs,13,5,E13,0,=G13+(H13*D13)
+Labor - Support lugs,13,7,G13,0,"=IF(C13=0,""0"",IF(C13=1,""9"",""18""))"
+Labor - Support lugs,13,8,H13,4,=4
+Labor - Support lugs,14,2,B14,>9' to 10',
+Labor - Support lugs,14,5,E14,0,=G14+(H14*D14)
+Labor - Support lugs,14,7,G14,0,"=IF(C14=0,""0"",IF(C14=1,""10"",""20""))"
+Labor - Support lugs,14,8,H14,4,=4
+Labor - Support lugs,15,2,B15,>10' to 11' ,
+Labor - Support lugs,15,5,E15,0,=G15+(H15*D15)
+Labor - Support lugs,15,7,G15,0,"=IF(C15=0,""0"",IF(C15=1,""11"",""22""))"
+Labor - Support lugs,15,8,H15,4,=4
+Labor - Support lugs,16,2,B16,>11' to 12',
+Labor - Support lugs,16,5,E16,0,=G16+(H16*D16)
+Labor - Support lugs,16,7,G16,0,"=IF(C16=0,""0"",IF(C16=1,""13"",""26""))"
+Labor - Support lugs,16,8,H16,4,=4
+Labor - Support lugs,17,2,B17,>12' to 13',
+Labor - Support lugs,17,5,E17,0,=G17+(H17*D17)
+Labor - Support lugs,17,7,G17,0,"=IF(C17=0,""0"",IF(C17=1,""14"",""28""))"
+Labor - Support lugs,17,8,H17,4,=4
+Labor - Support lugs,18,2,B18,>13' to 14',
+Labor - Support lugs,18,5,E18,0,=G18+(H18*D18)
+Labor - Support lugs,18,7,G18,0,"=IF(C18=0,""0"",IF(C18=1,""15"",""30""))"
+Labor - Support lugs,18,8,H18,4,=4
+Labor - Support lugs,22,1,A22,TOC,

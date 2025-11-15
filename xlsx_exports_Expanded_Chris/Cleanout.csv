@@ -1,0 +1,45 @@
+sheet,row,col,address,value,formula
+Cleanout,3,3,C3,CLEANOUT BOTTOM,
+Cleanout,3,4,D3,1,
+Cleanout,3,5,E3,"1/4"" X 10"" X 36""",
+Cleanout,3,6,F3,SA240-304/304L,
+Cleanout,3,8,H3,40,
+Cleanout,4,3,C4,CLEANOUT TOP,
+Cleanout,4,4,D4,1,
+Cleanout,4,5,E4,"1/4"" x 10"" X 84""",
+Cleanout,4,6,F4,SA240-304/304L,
+Cleanout,4,8,H4,-,
+Cleanout,5,3,C5,CLEANOUT FLANGE,
+Cleanout,5,4,D5,1,
+Cleanout,5,5,E5,"5/8"" X 30"" X 42""         MF: (1) 48"" X 96""",
+Cleanout,5,6,F5,SA240-304/304L,
+Cleanout,5,8,H5,-,
+Cleanout,6,3,C6,CLEANOUT COVER,
+Cleanout,6,4,D6,1,
+Cleanout,6,5,E6,"5/8"" X 30"" X 42""         MF: DROP",
+Cleanout,6,6,F6,SA240-304/304L,
+Cleanout,6,8,H6,-,
+Cleanout,7,3,C7,DAVIT ARM,
+Cleanout,7,4,D7,1,
+Cleanout,7,5,E7,Savannah Tank Standard,
+Cleanout,7,6,F7,SA240-304/304L,
+Cleanout,7,7,G7,450,
+Cleanout,7,8,H7,6,
+Cleanout,8,3,C8,"BOLT, NUT, & GSKT.",
+Cleanout,8,4,D8,1,
+Cleanout,8,5,E8,"SA193-B7/2H(PLTD.),GARLOCK 3000",
+Cleanout,8,7,G8,350,=D8*350
+Cleanout,8,8,H8,2,=D8*2
+Cleanout,9,3,C9,REPAD,
+Cleanout,9,4,D9,1,
+Cleanout,9,5,E9,"1/4"" x 36"" X 84""         MF: (1) 48"" X 96""",
+Cleanout,9,6,F9,SA240-304/304L,
+Cleanout,9,8,H9,10,=D9*10
+Cleanout,15,3,C15,"Cleanout only to be used when customer requests
+not noted in Calculations
+Part of Drop down??
+Description is standard
+moc will match tank wetted parts
+prices listed are standard
+hours are standard",
+Cleanout,29,1,A29,TOC,

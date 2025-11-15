@@ -1,0 +1,43 @@
+sheet,row,col,address,value,formula
+LABOR- POLISH,1,1,A1,SMOOTH POLISH  (NOT FLUSH),
+LABOR- POLISH,2,1,A2,Diameter of Tank (FT),
+LABOR- POLISH,2,2,B2,Shell Length (FT),
+LABOR- POLISH,2,3,C2,# of Girth Seams,
+LABOR- POLISH,2,4,D2,# of Long Seams,
+LABOR- POLISH,2,5,E2,"# of < 14"" Nozzles",
+LABOR- POLISH,2,6,F2,"# of 14""+ Nozzles",
+LABOR- POLISH,2,7,G2,# of Baffles,
+LABOR- POLISH,2,8,H2,Total M/H for Smooth Polish,
+LABOR- POLISH,2,10,J2,Girth Seam M/H,
+LABOR- POLISH,2,11,K2,Long Seam M/H,
+LABOR- POLISH,2,12,L2," < 14"" Nozzles M/H",
+LABOR- POLISH,2,13,M2,"14""+ Nozzles M/H",
+LABOR- POLISH,2,14,N2,Baffles M/H,
+LABOR- POLISH,3,8,H3,0,=J3+K3+L3+M3+N3
+LABOR- POLISH,3,10,J3,0,=(A3*3.14*C3)/5
+LABOR- POLISH,3,11,K3,0,=(B3*D3)/5
+LABOR- POLISH,3,12,L3,0,=E3*0.5
+LABOR- POLISH,3,13,M3,0,=F3*1
+LABOR- POLISH,3,14,N3,0,=G3*2
+LABOR- POLISH,6,1,A6,SMOOTH POLISH (FLUSH),
+LABOR- POLISH,7,1,A7,Diameter of Tank (ft),
+LABOR- POLISH,7,2,B7,Shell Length (ft),
+LABOR- POLISH,7,3,C7,# of Girth Seams,
+LABOR- POLISH,7,4,D7,# of Long Seams,
+LABOR- POLISH,7,5,E7,"# of < 14"" Nozzles",
+LABOR- POLISH,7,6,F7,"# of 14"" + Nozzles",
+LABOR- POLISH,7,7,G7,# of Baffles,
+LABOR- POLISH,7,8,H7,Total M/H for Flush Polish,
+LABOR- POLISH,7,10,J7,Girth Seam M/H,
+LABOR- POLISH,7,11,K7,Long Seam M/H,
+LABOR- POLISH,7,12,L7," < 14"" Nozzles M/H",
+LABOR- POLISH,7,13,M7,"14""+ Nozzles M/H",
+LABOR- POLISH,7,14,N7,Baffles M/H,
+LABOR- POLISH,8,8,H8,0,=J8+K8+L8+M8+N8
+LABOR- POLISH,8,10,J8,0,=(A8*3.14*C8)/3
+LABOR- POLISH,8,11,K8,0,=(B8*D8)/3
+LABOR- POLISH,8,12,L8,0,=E8*0.5
+LABOR- POLISH,8,13,M8,0,=F8*1
+LABOR- POLISH,8,14,N8,0,=G8*3
+LABOR- POLISH,14,4,D14,"This will not be in the calculation.  This is (2) types of weld finish.  Enter the required information which will be in the calculation, other than baffles, and it gives you the amount of hours to do that type of weld finish",
+LABOR- POLISH,40,1,A40,TOC,

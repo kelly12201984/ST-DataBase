@@ -1,0 +1,125 @@
+sheet,row,col,address,value,formula
+LABOR- LEGS,1,1,A1,ANGLE LEGS  WELD HOURS,
+LABOR- LEGS,3,1,A3,Tank Diameter,
+LABOR- LEGS,3,2,B3,Leg Size,
+LABOR- LEGS,3,3,C3,# of Legs,
+LABOR- LEGS,3,4,D3,Poison Pad Req'd?,
+LABOR- LEGS,3,5,E3,Bracing Req'd?,
+LABOR- LEGS,3,6,F3,Gusseting Req'd?,
+LABOR- LEGS,3,7,G3,Total M/H for Legs,
+LABOR- LEGS,3,11,K3,M/H per Leg,
+LABOR- LEGS,3,12,L3,Poison Pad,
+LABOR- LEGS,3,13,M3,Bracing,
+LABOR- LEGS,3,14,N3,Gussets,
+LABOR- LEGS,4,1,A4,Up to 2',
+LABOR- LEGS,4,2,B4,"2"" x 2""",
+LABOR- LEGS,4,7,G4,0,=(C4*K4)+(C4*L4)+(C4*M4)+(C4*N4)
+LABOR- LEGS,4,11,K4,4,
+LABOR- LEGS,4,12,L4,0,"=IF(D4=""Yes"",""1.5"",""0"")"
+LABOR- LEGS,4,13,M4,0,"=IF(E4=""Yes"",""2"",""0"")"
+LABOR- LEGS,4,14,N4,0,"=IF(F4=""Yes"",""4"",""0"")"
+LABOR- LEGS,5,1,A5,>2' to 3',
+LABOR- LEGS,5,2,B5,"3"" x 3""",
+LABOR- LEGS,5,7,G5,0,=(C5*K5)+(C5*L5)+(C5*M5)+(C5*N5)
+LABOR- LEGS,5,11,K5,4,
+LABOR- LEGS,5,12,L5,0,"=IF(D5=""Yes"",""1.5"",""0"")"
+LABOR- LEGS,5,13,M5,0,"=IF(E5=""Yes"",""2"",""0"")"
+LABOR- LEGS,5,14,N5,0,"=IF(F5=""Yes"",""4"",""0"")"
+LABOR- LEGS,6,1,A6,>3' to 6',
+LABOR- LEGS,6,2,B6,"4"" x 4""",
+LABOR- LEGS,6,7,G6,0,=(C6*K6)+(C6*L6)+(C6*M6)+(C6*N6)
+LABOR- LEGS,6,11,K6,4,
+LABOR- LEGS,6,12,L6,0,"=IF(D6=""Yes"",""1.5"",""0"")"
+LABOR- LEGS,6,13,M6,0,"=IF(E6=""Yes"",""2"",""0"")"
+LABOR- LEGS,6,14,N6,0,"=IF(F6=""Yes"",""4"",""0"")"
+LABOR- LEGS,7,1,A7,>6' to 8',
+LABOR- LEGS,7,2,B7,"6"" x 6""",
+LABOR- LEGS,7,7,G7,0,=(C7*K7)+(C7*L7)+(C7*M7)+(C7*N7)
+LABOR- LEGS,7,11,K7,4,
+LABOR- LEGS,7,12,L7,0,"=IF(D7=""Yes"",""1.5"",""0"")"
+LABOR- LEGS,7,13,M7,0,"=IF(E7=""Yes"",""2"",""0"")"
+LABOR- LEGS,7,14,N7,0,"=IF(F7=""Yes"",""4"",""0"")"
+LABOR- LEGS,7,18,R7,"This will only be used on ASME pressure vessels.  The calculation will tell you what type of leg it is, how many, requires a repad (poison pad), bracing or gussets",
+LABOR- LEGS,9,1,A9,BEAM LEGS  WELD HOURS,
+LABOR- LEGS,11,1,A11,Tank Diameter,
+LABOR- LEGS,11,2,B11,Leg Size,
+LABOR- LEGS,11,3,C11,# of Legs,
+LABOR- LEGS,11,4,D11,Side Mount or Undercut?,
+LABOR- LEGS,11,5,E11,Poison Pad Req'd?,
+LABOR- LEGS,11,6,F11,Total M/H for Legs,
+LABOR- LEGS,11,8,H11,Side Mount / Undercut,
+LABOR- LEGS,11,9,I11,Poison Pad,
+LABOR- LEGS,12,1,A12,Up to 6',
+LABOR- LEGS,12,2,B12,"4"" WF",
+LABOR- LEGS,12,6,F12,0,=(C12*H12)+(C12*I12)
+LABOR- LEGS,12,8,H12,5,"=IF(D12=""Side Mount"",""4"",""5"")"
+LABOR- LEGS,12,9,I12,0,"=IF(E12=""Yes"",""1.5"",""0"")"
+LABOR- LEGS,13,1,A13,>6' to 8',
+LABOR- LEGS,13,2,B13,"6"" WF",
+LABOR- LEGS,13,6,F13,0,=(C13*H13)+(C13*I13)
+LABOR- LEGS,13,8,H13,6,"=IF(D13=""Side Mount"",""5"",""6"")"
+LABOR- LEGS,13,9,I13,0,"=IF(E13=""Yes"",""1.5"",""0"")"
+LABOR- LEGS,14,1,A14,>8' to 10',
+LABOR- LEGS,14,2,B14,"8"" WF",
+LABOR- LEGS,14,6,F14,0,=(C14*H14)+(C14*I14)
+LABOR- LEGS,14,8,H14,7,"=IF(D14=""Side Mount"",""6"",""7"")"
+LABOR- LEGS,14,9,I14,0,"=IF(E14=""Yes"",""1.5"",""0"")"
+LABOR- LEGS,15,1,A15,>10' to 12',
+LABOR- LEGS,15,2,B15,"10"" WF",
+LABOR- LEGS,15,6,F15,0,=(C15*H15)+(C15*I15)
+LABOR- LEGS,15,8,H15,8,"=IF(D15=""Side Mount"",""7"",""8"")"
+LABOR- LEGS,15,9,I15,0,"=IF(E15=""Yes"",""2"",""0"")"
+LABOR- LEGS,16,1,A16,>12',
+LABOR- LEGS,16,2,B16,"12"" WF",
+LABOR- LEGS,16,6,F16,0,=(C16*H16)+(C16*I16)
+LABOR- LEGS,16,8,H16,10,"=IF(D16=""Side Mount"",""8"",""10"")"
+LABOR- LEGS,16,9,I16,0,"=IF(E16=""Yes"",""2.5"",""0"")"
+LABOR- LEGS,18,1,A18,PIPE LEGS  WELD HOURS,
+LABOR- LEGS,20,1,A20,Tank Diameter,
+LABOR- LEGS,20,2,B20,Leg Size,
+LABOR- LEGS,20,3,C20,# of Legs,
+LABOR- LEGS,20,4,D20,Poison Pad Req'd?,
+LABOR- LEGS,20,5,E20,Total M/H for Legs,
+LABOR- LEGS,20,7,G20,M/H per Leg,
+LABOR- LEGS,20,8,H20,Poison Pad,
+LABOR- LEGS,21,1,A21,Up to 2',
+LABOR- LEGS,21,2,B21,"2"" Pipe",
+LABOR- LEGS,21,5,E21,0,=(C21*G21)+(C21*H21)
+LABOR- LEGS,21,7,G21,4,
+LABOR- LEGS,21,8,H21,0,"=IF(D21=""Yes"",""1.5"",""0"")"
+LABOR- LEGS,22,1,A22,>2' to 3',
+LABOR- LEGS,22,2,B22,"3"" Pipe",
+LABOR- LEGS,22,5,E22,0,=(C22*G22)+(C22*H22)
+LABOR- LEGS,22,7,G22,4.5,
+LABOR- LEGS,22,8,H22,0,"=IF(D22=""Yes"",""1.5"",""0"")"
+LABOR- LEGS,23,1,A23,>3' to 6',
+LABOR- LEGS,23,2,B23,"4"" Pipe",
+LABOR- LEGS,23,5,E23,0,=(C23*G23)+(C23*H23)
+LABOR- LEGS,23,7,G23,5,
+LABOR- LEGS,23,8,H23,0,"=IF(D23=""Yes"",""1.5"",""0"")"
+LABOR- LEGS,24,1,A24,>6' to 8',
+LABOR- LEGS,24,2,B24,"6"" Pipe",
+LABOR- LEGS,24,5,E24,0,=(C24*G24)+(C24*H24)
+LABOR- LEGS,24,7,G24,8,
+LABOR- LEGS,24,8,H24,0,"=IF(D24=""Yes"",""1.5"",""0"")"
+LABOR- LEGS,25,1,A25,>8' to 10',
+LABOR- LEGS,25,2,B25,"8"" Pipe",
+LABOR- LEGS,25,5,E25,0,=(C25*G25)+(C25*H25)
+LABOR- LEGS,25,7,G25,9,
+LABOR- LEGS,25,8,H25,0,"=IF(D25=""Yes"",""3"",""0"")"
+LABOR- LEGS,26,1,A26,>10' to 12',
+LABOR- LEGS,26,2,B26,"10"" Pipe",
+LABOR- LEGS,26,5,E26,0,=(C26*G26)+(C26*H26)
+LABOR- LEGS,26,7,G26,10,
+LABOR- LEGS,26,8,H26,0,"=IF(D26=""Yes"",""4"",""0"")"
+LABOR- LEGS,27,1,A27,>12' to 14',
+LABOR- LEGS,27,2,B27,"12"" Pipe",
+LABOR- LEGS,27,5,E27,0,=(C27*G27)+(C27*H27)
+LABOR- LEGS,27,7,G27,12,
+LABOR- LEGS,27,8,H27,0,"=IF(D27=""Yes"",""5"",""0"")"
+LABOR- LEGS,28,1,A28,>14' ,
+LABOR- LEGS,28,2,B28,"14"" Pipe",
+LABOR- LEGS,28,5,E28,0,=(C28*G28)+(C28*H28)
+LABOR- LEGS,28,7,G28,13,
+LABOR- LEGS,28,8,H28,0,"=IF(D28=""Yes"",""6"",""0"")"
+LABOR- LEGS,38,1,A38,TOC,
